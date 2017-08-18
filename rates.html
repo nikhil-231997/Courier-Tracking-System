@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Rates</title>
+    <link href="homecss.css" rel="stylesheet" type="text/css">
+    <link href="ratescss.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="topbar">
+       <div class="dropdownship">
+        <button class="dropbuttonship">Ship</button>
+
+        <div class="ship">
+          <a href="">Ship online-quick and simple</a><br/>
+          <a href="">Ship online-all features</a><br/>
+          <a href="">Learn more about online shipping</a><br/>
+          <a href="">Access your address book</a>
+        </div>
+      </div>
+      <div class="dropdowntrack">
+        <button class="dropbutton">Track</button>
+        <div class="track">
+          <a href="">Track by tracking number</a><br/>
+          <a href="">Advanced tracking options</a><br/>
+          <a href="">Obtain proof of deivery</a>
+          <p>More tracking options</p>
+              <a href="">Track by fedex</a>
+              <a href="">Track by email</a>
+              <a href="">Track by reference</a>
+        </div>
+      </div>
+      <div class="dropdownacc">
+        <button class="dropbutton">Manage My Account</button>
+        <div class="acc">
+          <a href="">Update my account information</a><br/>
+          <a href="">Sendelope Billing and Invoice Tools</a><br/>
+          <a href="">Sendelope eNews Letter</a>
+        </div>
+      </div>
+      <div class="dropdowntools">
+        <button class="dropbutton">Custom tools</button>
+        <div class="tools">
+          <a href="">Estimate duties and taxes</a><br/>
+          <a href="">Document Preparation center</a><br/>
+          <a href="">Sendelope Global trade manager</a>
+        </div>
+      </div>
+    </div>
+    <p class="big"> Get Rates & Transit Times</p><br/><br/>
+    <p class="small">Use this simple tool to obtain a rate and determine the expected date and time for your shipment</p>
+    <div class="body">
+    <span id="span">From/To</span><br/><br/>
+    <fieldset>
+      <legend>From</legend>
+      <table>
+      <tr>
+        <td>*Country/Location:</td>
+        <td><select>
+        <option>India</option>
+        <option>America</option>
+        </td>
+      </tr>
+      <tr>
+        <td>*Postal code:</td>
+        <td><input type="text" name="postalCode" class="pCode"/></td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td><input type="text" name="City" class="city"/>
+      </tr>
+      </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+        <legend>To</legend>
+        <table>
+          <tr>
+          <td>*Country/Location:</td>
+          <td><select>
+          <option>India</option>
+          <option>America</option>
+          </td>
+        </tr>
+        <tr>
+          <td>*Postal code:</td>
+          <td><input type="text" name="postalCode" class="pCode"/></td>
+        </tr>
+        <tr>
+          <td>*City:</td>
+          <td><input type="text" name="City" class="city"/>
+        </tr>
+        </table>
+        </fieldset>
+        <br/>
+        <fieldset>
+          <legend>Additional Information</legend>
+          <table>
+            <tr>
+              <td>*No of packages</td>
+              <td><input type="text" name="nofpackages" value="1"</td>
+            </tr>
+            <td>*Weight</td>
+            <td><input type="text" name="weight" class="weight"/></td>
+            <td><select>
+                <option>kgs</option>
+                <option>lbs</option>
+              </td>
+            <tr>
+            <td>*Pickup/Dropoff</td>
+            <td><select>
+            <option>Sendelope pickup</option>
+            <option>Dropoff package</option>
+            </td>
+            </tr>
+            <tr>
+              <td>Ship Date</td>
+              <td><input type="date"/></td>
+            </tr>
+        </fieldset>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.body
+{
+  z-index:-2;
+  position:fixed;
+  margin-left:300px;
+  min-width:800px;
+  margin-top:50px;
+  border:1px solid black;
+}
+.big
+{
+  z-index:-2;
+  position:fixed;
+  color:purple;
+  font-size:20px;
+  margin-left:300px;
+}
+.small
+{
+    z-index:-2;
+    position:fixed;
+    color:black;
+    font-size:13px;
+    margin-left:300px;
+}
+#span
+{
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-right-style:solid;
+  border-right-width:1px;
+}

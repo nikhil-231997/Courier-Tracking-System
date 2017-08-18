@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	
+    <script type="text/javascript" src="E:\WP\jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="Payment.js"></script>
+    
+
+    <style type="text/css">
+		#Shipment_pay{width: 50%;
+		  position: absolute;
+    left: 5%;
+  }
+		#Duty_pay{width: 50%;
+		  position: absolute;
+    right: 5%;
+  }
+   	h2 , h3 , h4 , h5 { color: darkblue; }
+   	input[type=number] {
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+input[type=number]:focus {
+    border: 2px solid #555;
+}
+select {
+    width: 65%;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 1px;
+    background-color: #f1f1f1;
+}
+
+button {
+	border-radius: 3px;
+	height: 6%;
+	width: 10%;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 1px 2px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+ 	position: absolute;
+ 	left: 90%;}
+
+td{padding: 15px;}
+}
+
+
+span
+  {
+  	color:red;
+  }
+
+	</style>
+
+</head>
+<body>
+<h3>Enter Payment Details</h3>
+<h5>Enter Your Sendelope Account Number to pay for the shipment</h5>
+<form id="Shipment_pay" name = "Shipment_pay" method="post">
+<h4>Shipment Payment Method</h4>
+<hr><br>
+<table>
+<tr>
+	<td>Bill to</td>              
+	<td><select name="bill_to1"><option>My Account</option><option>Recipient</option><option>Third Party</option></select></td>
+</tr>
+<tr>
+	<td>Account no.</td>
+    <td><input type="Number" id="Sendelope_accno1" name="Sendelope_accno1"> <br> <span id="a" ></span></td>
+</tr>
+</table>
+</form>
+<form id="Duty_pay" method="Post" action="Payment.jsp" onSubmit="return Shipment_Duty_Pay_check()">
+<h4>Duties, Taxes and Fess Payment Method</h4>
+<hr><br>
+<table>
+<tr>
+	<td>Bill to</td>              
+	<td><select name="bill_to2" ><option>My Account</option><option>Recipient</option><option>Third Party</option></select></td>
+</tr>
+
+<tr>
+	<td>Account no. </td>          
+	<td><input type="Number" id="Sendelope_accno2" name="Sendelope_accno2"><br> <span id ="b" ></span></td>
+</tr>
+</table>
+<br><input type="button" onclick="val()" id="pay_exit" value="Continue">
+</form>
+</body>
+</html>

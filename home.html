@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="homecss.css">
+    <script type="text/javascript"src="jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $(".dropbuttonship").mouseenter(function(){
+              $(".ship").slideDown(function(){$(".login").hide();});
+
+              $(".ship").css({"margin-left":"300px","z-index":"2","display":"block","max-height":"225px","max-width":"200px","background-color":"white","border":"2px solid black"});
+          });
+          $(".dropdownship").mouseleave(function(){
+            $(".ship").slideUp(function(){$(".login").show();});
+          });
+          $(".dropbuttontrack").mouseenter(function(){
+              $(".track").slideDown(function(){$(".login").fadeTo("",0.2);$(".animation").hide();});
+              $(".trackframe").hide();
+              $(".links").fadeTo("",0.2);
+              $(".track").css({"z-index":"2","display":"block","max-height":"900px","max-width":"200px","background-color":"white","border":"2px solid black"});
+          });
+          $(".dropdowntrack").mouseleave(function(){
+            $(".track").slideUp(function(){$(".login").fadeTo("",1);$(".animation").show();$(".trackframe").show();});
+              $(".links").fadeTo("",1);
+          });
+          $(".dropbuttonmanage").mouseenter(function(){
+              $(".acc").slideDown(function(){$(".animation").hide();});
+
+              $(".acc").css({"margin-left":"0px","z-index":"2","display":"block","max-height":"225px","max-width":"200px","background-color":"white","border":"2px solid black"});
+          });
+          $(".dropdownacc").mouseleave(function(){
+            $(".acc").slideUp(function(){$(".animation").show();});
+          });
+          $(".dropbuttontools").mouseenter(function(){
+              $(".tools").slideDown(function(){$(".animation").hide();});
+
+              $(".tools").css({"margin-left":"0px","z-index":"2","display":"block","max-height":"225px","max-width":"200px","background-color":"white","border":"2px solid black"});
+          });
+          $(".dropdowntools").mouseleave(function(){
+            $(".tools").slideUp(function(){$(".animation").show();});
+          });
+      });
+
+  </script>
+  </head>
+  <body>
+    <div class="topbar">
+       <div class="dropdownship">
+        <button class="dropbuttonship">Ship</button>
+        <div class="ship">
+          <a href="">Ship online-quick and simple</a>
+          <a href="">Ship online-all features</a>
+          <a href="">Learn more about online shipping</a>
+          <a href="">Access your address book</a>
+        </div>
+      </div>
+      <div class="dropdowntrack">
+        <button class="dropbuttontrack">Track</button>
+        <div class="track">
+          <a href="">Track by tracking number</a><br/>
+          <a href="">Advanced tracking options</a><br/>
+          <a href="">Obtain proof of deivery</a>
+          <p>More tracking options</p>
+              <a href="">Track by fedex</a>
+              <a href="">Track by email</a>
+              <a href="">Track by reference</a>
+        </div>
+      </div>
+      <div class="dropdownacc">
+        <button class="dropbuttonmanage">Manage My Account</button>
+        <div class="acc">
+          <a href="">Update my account information</a><br/>
+          <a href="">Sendelope Billing and Invoice Tools</a><br/>
+          <a href="">Sendelope eNews Letter</a>
+        </div>
+      </div>
+      <div class="dropdowntools">
+        <button class="dropbuttontools">Custom tools</button>
+        <div class="tools">
+          <a href="">Estimate duties and taxes</a><br/>
+          <a href="">Document Preparation center</a><br/>
+          <a href="">Sendelope Global trade manager</a>
+        </div>
+      </div>
+    </div>
+ <iframe src="loginiframe.html" class="login" scrolling="no"></iframe>
+ <div class="animation"></div>
+ <iframe src="quickacessframe.html" class="links" scrolling="no"></iframe>
+ <iframe src="trackframe.html" class="trackframe" scrolling="no"></iframe>
+ <iframe src="findlocations.html" class="findlocations" scrolling="no"></iframe>
+ <iframe src="rateframe.html" class="rateframe" scrolling="no"></iframe>
+ <iframe src="newsframe.html" class="newsframe" scrolling="no"></iframe>
+
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ship_Manager</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="Shipment_Details.js"></script>
+    
+   <style type="text/css">
+
+
+   	h2 , h3 { color: darkblue; }
+   	input[type=number] {
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+input[type=number]:focus {
+    border: 2px solid #555;
+}
+select {
+    width: 30%;
+    padding: 2px 2px;
+    border: none;
+    border-radius: 1px;
+    background-color: #f1f1f1;
+}
+button {
+	border-radius: 3px;
+	height: 6%;
+	width: 10%;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 1px 2px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+ 	position: absolute;
+ 	left: 70%;}
+ #Shipment {position: absolute;
+ 	left: 1%}
+
+ 	hr{
+ 		background-color: blue;
+ 		width: 100%;
+ 		height: 0.5px;
+ 		position: absolute;
+ 	left: 2px;
+
+ 	}
+  #desc_doc{width: 250px;}
+
+  #L,#W,#H{width: 50px;}
+}
+
+.input{
+position: absolute;
+  left: 75%; 
+
+}
+
+td{height: 45px;}
+
+span { color:red; }
+
+
+   </style>
+
+</head>
+<body>
+ 
+<h2>Choose your options</h2>
+<hr>
+<br><br>
+<h3>Package Details</h3>
+<hr><br>
+<form action="Shipment_Details.jsp" onsubmit="return val()" id="Shipment" name="Shipment" method="post" >
+<table>
+<tr>
+  <td>Package Weight</td>           
+  <td class="input"><input type="number" id="weight" name="weight" class="required"><select><option>kg</option><option>lbs</option></select><br><span id="a" ></span></td>
+</tr>
+
+<tr>
+  <td>Dimensions</td>               
+  <td class="input"><input type="number" id="L" name="L" placeholder="L" class="required"> 
+    <input type="number" id="W" name="W" placeholder="W" class="required"> 
+    <input type="number" id="H" name="H" placeholder="H" class="required"> <select><option>Meters</option><option>Centimeters</option><option>Feet</option></select><br><span  id="b" ></span></td>
+</tr>
+
+<tr>
+  <td>Package Contents</td>         
+  <td class="input"><input type="radio" name="content" value="docs" >Documents  <input type="radio" name="content" value="products">Products</td>
+</tr>
+
+<tr id="doc_desc">
+  
+  <td>Document Description</td>     
+  <td class="input"><select id="desc_doc" name="desc_doc"><option>Select</option><option>Correspondence/No invoice Value</option><option>Personal document (e.g. letter)</option><option>Interoffice document (e.g. 
+  memo)</option><option>Business document (e.g. contract)</option><option>Other</option></select></td>
+
+</tr>    
+
+<tr>
+
+  <td>Shipment Purpose</td>         
+  <td class="input"><select id="purpose" name="purpose"><option>Select</option><option>Business</option><option>Personal</option></select></td>
+
+</tr>  
+
+<tr>
+
+  <td>Invoice</td>                  
+  <td class="input"><input type="number" id="invoice_value" name="invoice_value" class="required"> INR<br><span  id="c"  ></span></td>
+
+</tr>
+
+<tr>
+
+   <td>Freight On Value</td>         
+   <td class="input"><select id="freight" name="freight"><option>Select</option><option>Carrier Risk</option><option>Own Risk</option></select></td>
+
+</tr>
+
+<tr>
+
+  <td>Carriage Value</td>           
+  <td><input type="number" id="carriage" name="carriage" placeholder="(optional)"> INR<br><span  id="d"  ></span></td>
+
+</tr>
+
+</table>
+<br><br>
+<input type="submit" value="Calculate Rates" >
+
+</form>
+</body>
+</html>

@@ -1,0 +1,163 @@
+.dropdownship,.dropdowntrack,.dropdownacc,.dropdowntools
+{
+  float:left;
+  z-index:1;
+}
+.dropbuttontrack,.dropbuttonmanage,.dropbuttontools
+{
+  position:relative;
+  display:inline;
+  background-image:url(greynwhite2.png);
+  width:200px;
+  height:75px;
+  font-size:20px;
+  z-index:1;
+  color:purple;
+}
+.dropbuttonship
+{
+  margin-left:300px;
+  position:relative;
+  display:inline-block;
+background-image:url(greynwhite2.png);
+  width:200px;
+  height:75px;
+  font-size:20px;
+  z-index:1;
+  color:purple;
+}
+
+.topbar
+{
+  background-image:url(greynwhite2.png);
+
+  width:100%;
+  height:75px;
+  margin-top:25px;
+}
+.ship
+{
+  display:none;
+  z-index:1;
+}
+
+.ship a
+{
+    color:purple;
+    display:block;
+    padding:12px 12px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+
+.track
+{
+  display:none;
+    z-index:1;
+}
+.dropdowntrack p
+{
+  font-size:20px;
+  margin-left:10px;
+}
+.track a
+{
+    display:block;
+    padding:12px 12px;
+    text-decoration:none;
+    font-size:18px;
+    z-index:1;
+    color:purple;
+}
+.acc
+{
+  display:none;
+  z-index:1;
+}
+
+.acc a
+{
+    display:block;
+    padding:12px 12px;
+    text-decoration:none;
+    font-size:18px;
+  z-index:1;
+  color:purple;
+}
+.tools
+{
+  display:none;
+  z-index:1;
+}
+
+.tools a
+{
+    display:block;
+    padding:12px 12px;
+    text-decoration:none;
+    font-size:18px;
+    color:purple;
+}
+
+.login
+{
+  z-index:0;
+  width:15%;
+  height:30%;
+  position:absolute;
+  left:310px;
+  top:100px;
+}
+.animation
+{
+  position:absolute;
+  width:45%;
+  height:30%;
+  left:555px;
+  top:100px;
+  background-image:url("received.png");
+  background-repeat: no-repeat;
+}
+.links
+{
+  position:absolute;
+  width:15%;
+  height:65%;
+  left:310px;
+  top:330px;
+}
+
+.trackframe
+{
+  position:absolute;
+  top:330px;
+  left:555px;
+  width:15%;
+  height:53%;
+}
+.findlocations
+{
+  position: absolute;
+  top:550px;
+  left:555px;
+  width:15%;
+  height:24.5%;
+}
+
+.rateframe
+{
+  position: absolute;
+  top:330px;
+  left:801px;
+  width:15%;
+  height:53%;
+}
+.newsframe
+{
+  position:absolute;
+  top:330px;
+  left:1048px;
+  width:14.3%;
+  height:53%;
+}

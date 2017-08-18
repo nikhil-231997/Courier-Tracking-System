@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address Information</title>
+
+	<script type="text/javascript" src="E:\WP\jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="Address_info.js"></script>
+	<style type="text/css">
+		#from{width: 50%;
+		  position: absolute;
+    left: 10px;
+  }
+  span
+  {
+  	color:red;
+  }
+		#to{width: 50%;
+		  position: absolute;
+    right: 0px;
+  }
+   	h2 , h3 { color: darkblue; }
+   	input[type=number],input[type=text] {
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+input[type=number],input[type=text]:focus {
+    border: 2px solid #555;
+}
+select {
+    width: 45%;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 1px;
+    background-color: #f1f1f1;
+}
+button {
+	border-radius: 3px;
+	height: 6%;
+	width: 10%;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 1px 2px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+ 	position: absolute;
+ 	left: 70%;}
+
+ 	hr{
+ 		background-color: blue;
+ 		width: 100%;
+ 		height: 0.5px;
+ 		position: absolute;
+ 	left: 2px;
+
+ 	}
+}
+
+td{height: 45px;}
+
+
+
+
+	</style>
+</head>
+<body>
+<h2>Address Information</h2>
+<hr>
+<div id="from">
+<form name="from_address" method="post">
+<h3>From Address</h3>
+<table>
+
+
+<tr>
+	<td><label>Your Name</label></td>               
+	<td><input type="text" name="from_name" id="from_name"><br/><span id="fname"></span></td>
+</tr>
+
+<tr>
+	<td><label>Company</label></td>			
+	<td><input type="text" name="from_company" id="from_company" placeholder="(optional)"><br/><span id="company"></span></td>
+</tr>
+
+<tr>
+	<td><label>Country/Location</label></td>        
+	<td><select label="India" name="from_country"><option  value="IND">India</option></select></td>
+</tr>
+	
+<tr>	
+	<td><label>Address</label></td>
+	<td><input type="text"  name="from_street" id="from_street" placeholder="Street address"><br/><span id="faddress"></span></td>
+</tr>
+
+	
+<tr>
+	<td colspan="2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="from_floor" id="from_floor" placeholder="Floor,Apt.,Suite,etc.."><br><span id="fflat"></</span></td>
+</tr>
+
+<tr>
+	
+	<td><label>Postal Code</label></td>             
+	<td><input type="text" name="from_post"  id="from_post"><br/><span id="fpostal"></span></td>
+
+</tr>
+
+<tr>	
+	<td><label>City</label></td>                    
+	<td><input type="text"  name="from_city" id="from_city"><br/><span id="fcity"></span></td>
+</tr>
+
+<tr>	
+	
+	<td><label>State</label></td>                   
+	<td><input type="text" name="from_state" id="from_state"><br/><span id="fstate"></span></td>
+
+</tr>
+
+<tr>	
+	<td><label>Phone</label></td>                   
+	<td><input type="text" name="from_phone" id="from_phone"><br/><span id="fphone"></span></td>
+</tr>
+
+<tr>
+	<td><label>Email</label></td>                   
+	<td><input type="text" name="from_email" id="from_email"><br/><span id="fmail"></span></td>
+</tr>
+
+<tr>
+	<td><label>VAT/CST/TIN no.</label></td>         
+	<td><input type="text" name="from_vat" id="from_vat" placeholder="(optional)"></td>
+</tr>
+ 	</table>
+	</form>
+</div>
+
+<div id="to">
+<form action="Address_info.jsp"name="to_address" method="post">
+<h3>To Address</h3>
+<table>
+<tr>
+	<td><label>Your Name</label></td>               
+	<td><input type="text" name="to_name" id="to_name"><br/><span id="tname"></span></td>
+</tr>
+
+<tr>
+	<td><label>Company</label></td>			
+	<td><input type="text" name="to_company" id="to_company" placeholder="(optional)"></td>
+</tr>
+
+<tr>
+	<td><label>Country/Location</label></td>        
+	<td><select label="India" name="to_country"><option  value="IND">India</option></select></td>
+</tr>
+	
+<tr>	
+	<td><label>Address</label></td>
+	<td><input type="text" name="to_street" id="to_street" placeholder="Street address"><br/><span id="taddress"></span></td>
+</tr>
+
+	
+<tr>
+	<td colspan="2" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="to_floor" id="to_floor" placeholder="Floor,Apt.,Suite,etc.."><br><span id="tflat"></span></td>
+</tr>
+
+<tr>
+	
+	<td><label>Postal Code</label></td>             
+	<td><input type="text" name="to_post" id="to_post"><br/><span id="tpostal"></span></td>
+
+</tr>
+
+<tr>	
+	<td><label>City</label></td>                    
+	<td><input type="text" name="to_city" id="to_city"><br/><span id="tcity"></span></td>
+</tr>
+
+<tr>	
+	
+	<td><label>State</label></td>                   
+	<td><input type="text" name="to_state" id="to_state"><br/><span id="tstate"></span></td>
+
+</tr>
+
+<tr>	
+	<td><label>Phone</label></td>                   
+	<td><input type="text" name="to_phone" id="to_phone"><br/><span id="tphone"></span></td>
+</tr>
+
+<tr>
+	<td><label>Email</label></td>                   
+	<td><input type="text" name="to_email" id="to_email"><br/><span id="tmail"></span></td>
+</tr>
+
+<tr>
+	<td><label>VAT/CST/TIN no.</label></td>         
+	<td><input type="text" name="to_vat" id="to_vat" placeholder="(optional)"></td>
+</tr>
+	</table>
+	<br><br><br>
+
+    <input type="button" onclick="val()" id="address_exit" value="Continue">
+	
+	</form>
+</div>
+
+
+
+</body>
+</html>

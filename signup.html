@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Sendelope.com</title>
+  <style>
+  #signup
+  {
+  	background-color:lightgrey;
+  }
+  .navbar navbar-default
+{
+	background-color:grey;
+}
+  #logo,h3
+  {
+  	color:purple;
+  }
+  .accept
+  {
+  	background-color:purple;
+  	color:white;
+  }
+    body
+    {
+      scroll:yes;
+    
+    }
+    td
+    {
+       text-align:left;
+       vertical-align:top;
+    }
+    p
+    {
+        color:red;
+    }
+  </style>
+
+  
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+ <h2 style="text-align:center">Welcome To Sendelope</h2>
+ <div class="container" id="signup">
+<h3>Signup</h3>
+<form id="my_form" action="signupnew.jsp" onSubmit="return val()" name="user_info" method="post">
+<table class="table table-condensed" border=0px >
+	
+	<tr>
+	     <td>*Create a User ID:</td>
+	     <td><input type="text" name="UserId" id="User_ID">
+       <p id="UID"></p></td>
+
+	</tr>
+	<tr>
+	     <td>*Create a Password</td>
+	     <td ><input type="password" name="Password" id="Pass_word">
+       <p id="User_pass"></p></td>
+	</tr>
+	<tr>
+	     <td>*Re-Enter Password</td>
+	     <td><input type="password" name="confirmpassword" id="Confirm_password">
+       <p id="CP"></p></td>
+	</tr>
+	<tr>
+	    <td>*Secret Question</td>
+	    <td><select name="secretQ" label="-Select one-">
+                       	<option>What is your mother's first name?</option>
+                      	<option>What is your place of birth?</option>
+                      	<option>What is the name of a school you attended?</option>
+                       	<option>What is your father's middle name?</option>
+                       	<option>What is the name of a childhood pet?</option>
+         	            </select></td>
+	</tr>
+	<tr>
+	   <td>*Secret Answer</td>
+	   <td><input type="text" name="Answer" id="Secret_answer"><p id="SA"></p></td>
+	   
+	</tr>
+	<tr>
+	   <td>*First Name</td>
+	   <td><input type="text" name="FirstName" id="First_Name"><p id="FN"></p></td>
+	   
+	</tr>
+	<tr>
+	   <td>*Last Name</td>
+	   <td><input type="text" name="LastName" id="Last_Name"><p id="LN"></p></td>
+		
+	</tr>
+	<tr>
+	   <td>*Country</td>
+	   <td><select name="Country" label="India">
+          		     <option>Australia</option>
+             		  <option>Brazil</option>
+            		   <option>Bhutan</option>
+      	       </select></td>
+	</tr>
+	<tr>
+	    <td>*ZIP/Postal</td>
+	    <td><input type="number" name="zip" id="Potal_code">
+      <p id="PC"></p></td>
+	<tr>
+	    <td>*Address 1</td>
+	    <td><input type="text" name="Address1" id="Address_1">
+      <p id="ADD1"></p></td>
+	</tr>
+	<tr>
+	    <td>*Address 2</td>
+	    <td><input type="text" name="Address2" id="Address_2">
+      <p id="ADD2"></p></td>
+	</tr>
+	<tr>
+	    <td>*City</td>
+	    <td><input type="text" name="City" id="City">
+      <p id="CT"></p></td>
+	</tr>
+	<tr>
+	    <td>*Email</td>
+	    <td><input type="email" name="Useremail" id="User_email">
+      <p id="UE"></p></td>
+	</tr>
+</table>
+
+
+
+<input type="checkbox" name="checkbox" id="Check_box">I would like to receive information about
+Sendelope via e-mail
+<br/><br/><br/>
+<input type="submit" class="accept" value="Submit" >
+<input type="button" class="accept" value="I Do Not Accept">
+</form>
+</div>
+</body>
+</html>

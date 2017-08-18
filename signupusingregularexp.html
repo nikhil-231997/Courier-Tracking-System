@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sendelope.com</title>
+  <style>
+    body
+    {
+      scroll:yes;
+      background-image:url(bimage.jpg);
+    }
+    td
+    {
+       text-align:left;
+       vertical-align:top;
+    }
+    p
+    {
+        color:red;
+    }
+  </style>
+  <script>
+    function validate(){
+    var user_name=document.user_info.UserId.value;
+    var password=document.user_info.Password.value;
+    var cpassword=document.user_info.confirmpassword.value;
+    var postal=document.user_info.zip.value;
+    var eid=document.user_info.Useremail.value;
+    var rename,repass,repostal,reeid;
+    rename=/[0-9]/;
+    if(!rename.test(user_name))
+    {
+        document.getElementById("UID").innerHTML="User ID should contain atleast one no(0-9)";
+    }
+    rename=/[A-Z]/;
+    if(!rename.test(user_name))
+    {
+        document.getElementById("UID").innerHTML="User ID should contain atleast one uppercase alphabet";
+    }
+    rename=/[a-z]/;
+    if(!rename.test(user_name))
+    {
+        document.getElementById("UID").innerHTML="User ID should contain atleast one lowercase alphabet";
+    }
+    repass=/[0-9]/;
+    if(!rename.test(Password))
+    {
+        document.getElementById("User_pass").innerHTML="Password should contain atleast one no(0-9)";
+    }
+    repass=/[A-Z]/;
+    if(!rename.test(Password))
+    {
+        document.getElementById("User_pass").innerHTML="Password should contain atleast one uppercase alphabet";
+    }
+    repass=/[a-z]/;
+    if(!repass.test(Password))
+    {
+        document.getElementById("User_pass").innerHTML="Password should contain atleast one lowercase alphabet";
+    }
+    repostal=/[0-9]/;
+    if(!repostal.test(zip))
+    {
+        document.getElementById("PC").innerHTML="Invalid postal code";
+    }
+    reeid=/[@]/;
+    if(!reeid.test(Useremail))
+    {
+        document.getElementById("UE").innerHTML="Invalid email id";
+    }
+  }
+</script>
+</head>
+<body>
+<form name="user_info">
+<table width=500px height=600px>
+	<tr>
+	     <td>*Create a User ID:</td>
+	     <td><input type="text" name="UserId" id="User_ID">
+       <p id="UID"></p></td>
+
+	</tr>
+	<tr>
+	     <td><b>*Create a Password</b></td>
+	     <td ><input type="password" name="Password" id="Pass_word">
+       <p id="User_pass"></p></td>
+	</tr>
+	<tr>
+	     <td><b>*Re-Enter Password</b></td>
+	     <td><input type="password" name="confirmpassword" id="Confirm_password">
+       <p id="CP"</p></td>
+	</tr>
+	<tr>
+	    <td><b>*Secret Question</b></td>
+	    <td><select label="-Select one-">
+                       	<option>What is your mother's first name?</option>
+                      	<option>What is your place of birth?</option>
+                      	<option>What is the name of a school you attended?</option>
+                       	<option>What is your father's middle name?</option>
+                       	<option>What is the name of a childhood pet?</option>
+         	            </select></td>
+	</tr>
+	<tr>
+	   <td><b>*Secret Answer</b></td>
+	   <td><input type="text" name="Answer" id="Secret_answer"></td>
+	</tr>
+	<tr>
+	   <td><b>*First Name</b></td>
+	   <td><input type="text" name="FirstName" id="First_Name"></td>
+	</tr>
+	<tr>
+	   <td><b>*Last Name</b></td>
+	   <td><input type="text" name="LastName" id="Last_Name"></td>
+	</tr>
+	<tr>
+	   <td><b>*Country</b></td>
+	   <td><select label="India">
+          		     <option>Australia</option>
+             		  <option>Brazil</option>
+            		   <option>Bhutan</option>
+      	       </select></td>
+	</tr>
+	<tr>
+	    <td><b>*ZIP/Postal</b></td>
+	    <td><input type="number" name="zip" id="Potal_code">
+      <p id="PC"></p></td>
+	<tr>
+	    <td><b>*Address 1</b></td>
+	    <td><input type="text" name="Address1" id="Address_1">
+      <p id="ADD1"></p></td>
+	</tr>
+	<tr>
+	    <td><b>*Address 2</b></td>
+	    <td><input type="text" name="Address2" id="Address_2">
+      <p id="ADD2"></p></td>
+	</tr>
+	<tr>
+	    <td><b>*City</b></td>
+	    <td><input type="text" name="City" id="City">
+      <p id="CT"></p></td>
+	</tr>
+	<tr>
+	    <td><b>*Email</b></td>
+	    <td><input type="email" name="Useremail" id="User_email">
+      <p id="UE"></p></td>
+	</tr>
+</table>
+
+<br/><br/><br/>
+
+<input type="checkbox" name="checkbox" id="Check_box">I would like to receive information about
+Sendelope via e-mail
+<br/><br/><br/>
+<input type="button" value="I accept" id="I_accept"  onclick="validate()"><pre>                               </pre>
+<input type="button" value="I Do Not Accept" id="I_Do_Not_Accept" >
+</form>
+</body>
+</html>
